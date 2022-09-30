@@ -11,12 +11,6 @@ class API {
     async fetchList() {
         return axios.get(`https://randomuser.me/api/?results=20.`);
     }
-
-
-    // fetch search results
-    async search({ query, per_page }) {
-        return axios.get(`${this.url}/search/repositories?q=${query}+org:${this.org}&per_page=${per_page}`);
-    }
 }
 
 let Api = new API();
